@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    padding-left: 20px;
+}
+
+h1{
+    font-family: 'Montez', cursive;
+    color: #3951fd;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+h3{
+    font-family: 'Ubuntu Mono', monospace;
+    /* font-size: large; */
+    margin-top: -20px;
+}
+
+.btns{
+    padding-right: 15px;
+    padding-top: 10px;
+}
+#sign{
+    background-color: #0101ff;
+    color: white;
+    border: 1px solid #dddddd;
+    font-weight: bolder;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.middle-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 370px;
+    gap: 20px;
+}
+
+#posts{
+    background-color: #cfb53b;
+    border: 1px solid #dddddd;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+

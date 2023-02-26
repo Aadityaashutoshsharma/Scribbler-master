@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <style>
-        body{
+        body {
             background-image: url(images/background.jpg);
             background-repeat: no-repeat;
             background-size: 100vw 100vh;
@@ -22,16 +22,35 @@
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
-    <div class="container">
+    <div class="container" onclick="hidingWindow()">
         <header>
             <div class="logo">
                 <h1>ScriBBler</h1>
                 <h3>Explore, Imagine, Create</h3>
             </div>
             <div class="btns">
-                <button id="sign">Sign Up</button>
-                <button id="sign">Sign In</button>
+                <div class="modals">
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn" onclick="popUp()">Sign Up</button>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close" onclick="newPopUp()">&times;</span>
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter your name">
+                            <label for="">Username</label>
+                            <input type="text" placeholder="Enter your username">
+                            <label for="">Password</label>
+                            <input type="password" placeholder="Enter your password">
+                            <label for="">Confirm-password</label>
+                            <input type="password" placeholder="Re-enter your password">
+                        </div>
+                    </div>
+                </div>
+                <button id="myBtn">Sign In</button>
             </div>
+
         </header>
 
         <div class="middle-container">
@@ -39,6 +58,7 @@
             <button id="posts">Create Posts</button>
         </div>
     </div>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

@@ -29,33 +29,57 @@
                 <h3>Explore, Imagine, Create</h3>
             </div>
             <div class="btns">
-                <div class="modals">
-                    <!-- Trigger/Open The Modal -->
-                    <button id="myBtn" onclick="popUp()">Sign Up</button>
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close" onclick="newPopUp()">&times;</span>
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter your name">
-                            <label for="">Username</label>
-                            <input type="text" placeholder="Enter your username">
-                            <label for="">Password</label>
-                            <input type="password" placeholder="Enter your password">
-                            <label for="">Confirm-password</label>
-                            <input type="password" placeholder="Re-enter your password">
-                        </div>
-                    </div>
-                </div>
-                <button id="myBtn">Sign In</button>
+                <button id="myBtn" onclick="popUp()">Sign Up</button>
+                <button id="myBtn" onclick="popUp()">Sign In</button>
             </div>
-
         </header>
 
         <div class="middle-container">
             <button id="posts">All Posts</button>
             <button id="posts">Create Posts</button>
+        </div>
+    </div>
+    <div class="modals">
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <h4>Get Started</h4>
+                <span class="close" onclick="newPopUp()">&times;</span>
+                <div class="innerModal">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Enter your name" id="inputDesign" />
+                    <label for="">Username</label>
+                    <input type="text" placeholder="Enter your username" id="inputDesign" />
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter your password" id="inputDesign" />
+                    <label for="">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="inputDesign" />
+
+                    <button id="modal-Btn">Sign Up</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modals">
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="newPopUp()">&times;</span>
+                <h4>Get Started</h4>
+                <label for="">Username</label>
+                <input type="text" placeholder="Enter your username" />
+                <label for="">Password</label>
+                <input type="password" placeholder="Enter your password" />
+
+                <button id="modal-Btn">Sign In</button>
+
+                <span id="memberJoin">Not a member? Sign Up</span>
+            </div>
         </div>
     </div>
     <script src="scripts/index.js"></script>

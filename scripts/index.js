@@ -15,4 +15,3 @@ btn.popUp = () => {
 span.newPopUp = () => {
     modal.style.display = "none";
 }
-

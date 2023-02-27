@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/post.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="firstContainer">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>ScriBBler</h1>
+                </a>
+                <h3>Explore, Imagine, Create</h3>
+            </div>
+            <div class="btns">
+                <button id="myBtn" onclick="popUp()">Sign Up</button>
+                <button id="myBtn" onclick="popUp()">Sign In</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <div class="blog-content">
+            <div id="blog-title" class="blog-Title">
+                <h id="blogTitleNew">How to create an event in JavaScript</h>
+            </div>
+            <div class="author">
+                <button type="button" id="editPost" class="editPost-btn" onclick="editPost()">Edit <i
+                        class="fa fa-edit"></i> </button>
+                <p>Add More</p>
+            </div>
+            <div class="insideBlog">
+                <p id="blog-body">
+                    A 2011 study conducted by researchers at the University of Minnesota indicated that male and
+                    female editors focus on different coverage topics. There was a greater concentration of
+                    females in the People and Arts category, while males focus more on Geography and Science.
+                </p>
+            </div>
+            <div class="like-btn">
+                <button id="like-blog" onclick="postLiked()">
+                    <i class="fa fa-thumbs-up"> Like</i>
+
+                </button>
+                <span id="comment-count">Be the first one to like this!</span>
+            </div>
+            <div class="comments-container">
+                <form class="comment-body">
+                    <label for="comment-content"></label>
+                    <textarea placeholder="Leave a comment..." id="comments-content" rows="5" cols="80"
+                        name="Content"></textarea> <br>
+                    <button type="button" class="new-comment" onClick="addComment()">Comment</button>
+                </form>
+                <p class="commentHeading">All Comments</p>
+                <div class="commentsBox" id="commentBox">
+                    <div class="contentOfComment">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

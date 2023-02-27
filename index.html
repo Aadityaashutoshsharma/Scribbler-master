@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@
         </header>
 
         <div class="middle-container">
-            <button id="posts">All Posts</button>
+            <a href="postslist.html"><button id="posts">All Posts</button></a>
             <button id="posts">Create Posts</button>
         </div>
     </div>
@@ -47,18 +48,18 @@
             <div class="modal-content">
                 <h4>Get Started</h4>
                 <span class="close" onclick="newPopUp()">&times;</span>
-                <div class="innerModal">
+                <form class="innerModal" onsubmit="getData()">
                     <label for="">Name</label>
-                    <input type="text" placeholder="Enter your name" id="inputDesign" />
+                    <input type="text" placeholder="Enter your name" id="name" required/>
                     <label for="">Username</label>
-                    <input type="text" placeholder="Enter your username" id="inputDesign" />
+                    <input type="text" placeholder="Enter your username" id="userName" required/>
                     <label for="">Password</label>
-                    <input type="password" placeholder="Enter your password" id="inputDesign" />
+                    <input type="password" placeholder="Enter your password" id="password" required/>
                     <label for="">Confirm Password</label>
-                    <input type="password" placeholder="Re-enter your password" id="inputDesign" />
-
-                    <button id="modal-Btn">Sign Up</button>
-                </div>
+                    <input type="password" placeholder="Re-enter your password" id="confirmPassword" required/>
+                    <input type="submit" value="Sign Up" id="modal-Btn"/>
+                   
+                </form>
 
             </div>
         </div>

@@ -28,7 +28,7 @@ header {
     padding-top: 10px;
   }
   
-  #myBtn {
+  .my-btn {
     background-color: #0101ff;
     color: white;
     border: 1px solid #dddddd;

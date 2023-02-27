@@ -17,6 +17,8 @@
   padding: 20px;
   border: 1px solid #888;
   width: 20vw;
+  border: 10px solid white;
+  border-radius: 5px;
 }
 
 .innerModal {
@@ -66,6 +68,17 @@
   cursor: pointer;
 }
 
+.memberSigning {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+#buttonSignUp {
+  color: blue;
+  cursor: pointer;
+}
 
 .middle-container {
   display: flex;
@@ -82,3 +95,69 @@
   text-align: center;
   cursor: pointer;
 }
+
+.postModal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.innerPostModal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.heading {
+  font-size: 35px;
+}
+
+.innerPostModal label {
+  font-size: 25px;
+}
+
+.innerPostModal input {
+  height: 2vh;
+  border: 1px solid white;
+  background-color: #f1f1f1;
+  font-size: 20px;
+}
+
+.innerPostModal textarea {
+  height: 52vh;
+  border: 1px solid white;
+  background-color: #f1f1f1;
+  font-size: 20px;
+}
+
+.closePost {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closePost:hover,
+.closePost:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#createButton {
+  background-color: green;
+  border: green;
+  color: white;
+  width: 5vw;
+  height: 3vh;
+  margin-left: 37vw;
+  border-radius: 2px;
+  padding: 3px 5px 5px 5px;
+  cursor: pointer;
+}
+
+

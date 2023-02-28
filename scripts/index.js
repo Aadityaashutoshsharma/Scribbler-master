@@ -85,6 +85,8 @@ function getPostData(){
     if(titleEle && contentEle){
          console.log(titleEle.value, contentEle.value);
     }
+    // location.href="http://www.google.com";
+
 }
 
 //data storing ended for posts

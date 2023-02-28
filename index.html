@@ -12,13 +12,13 @@
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <style>
+    <!-- <style>
         body {
             background-image: url(images/background.jpg);
             background-repeat: no-repeat;
             background-size: 100vw 100vh;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -93,14 +93,15 @@
                 <!-- Modal content -->
                 <div class="postModal-content">
     
-                    <form class="innerPostModal" onsubmit="getPostData()">
+                    <div class="innerPostModal" >
                         <span class="heading">Pen Your Post <span class="closePost" onclick="closePost()">&times;</span></span>
                         <label for="">Title</label>
                         <input type="text" placeholder="Enter title of your post" id="title" required />
                         <label for="">Content</label>
                         <textarea placeholder="Enter contents of your post" id="content" required></textarea>
-                        <input type="submit" value="Create" id="createButton" />
-                    </form>
+                        <!-- <input type="submit" value="Create" id="createButton" /> -->
+                        <a href="postslist.html"><button onclick="getPostData()">Create</button></a>
+                    </div>
                 </div>
             </div>
         </div>

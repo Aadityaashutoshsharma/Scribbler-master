@@ -58,3 +58,8 @@
     color: white;
     padding: 5px 10px;
 }
+
+.commentDesign{
+    list-style-type: none;
+    border: 1px solid red;
+}

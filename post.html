@@ -99,12 +99,11 @@
                 <form class="comment-body">
                     <label for="comment-content"></label>
                     <textarea placeholder="Leave a comment..." id="commentsContent" rows="5" cols="80" name="Content"></textarea> <br></br>
-                    <button type="button" class="new-comment" onclick="comments(commentsContent)">Comment</button>
+                    <button type="button" class="new-comment" onclick="getComments()">Comment</button>
                 </form>
                 <p class="commentHeading">All Comments</p>
                 <div class="commentsBox" id="commentBox">
-                    <div class="contentOfComment">
-                    </div>
+                    <div class="contentOfComment" id="newComment"></div>
                 </div>
             </div>
         </div>

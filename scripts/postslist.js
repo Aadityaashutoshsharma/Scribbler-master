@@ -67,3 +67,9 @@ var deleteEle = document.getElementsByClassName('posts')[0];
 function deletingPost() {
     deleteEle.remove();
 }
+
+var dltEle = document.getElementById("deleteBlogPrompt");
+
+function closeDelete(){
+    dltEle.style.display = "none";
+}

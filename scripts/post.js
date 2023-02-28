@@ -61,34 +61,6 @@ function getSignInData() {
 
 //data storing ended for signing function
 
-//Post function
-var modalPost = document.getElementById("postModal");
-var btnCreate = document.getElementById("posts");
-var spanCreate = document.getElementsByClassName("closePost")[0];
-
-function createPost() {
-    modalPost.style.display = "flex";
-}
-
-function closePost() {
-    modalPost.style.display = "none";
-}
-
-//Post function ended
-
-
-//data storing for posts
-var titleEle = document.getElementById("title");
-var contentEle = document.getElementById("content");
-
-function getPostData(){
-    if(titleEle && contentEle){
-         console.log(titleEle.value, contentEle.value);
-    }
-}
-
-//data storing ended for posts
-
 
 var addEventName = commentEle.value + '<br>';
 

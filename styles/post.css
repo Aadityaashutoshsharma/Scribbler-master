@@ -1,0 +1,50 @@
+.blog-content{
+    padding: 0 50px;
+}
+
+.blog-Title {
+    display: flex;
+    justify-content: center;
+}
+
+#blogTitleNew{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.author {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.author button{
+    background-color: #ed2553;
+    padding: -50px 10px;
+}
+
+.insideBlog p{
+    font-weight: bolder;
+} 
+
+.actionOnBlog{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.like-btn button {
+    background-color: #ed2553;
+}
+
+.comments-container{
+    margin-top: 65px;
+}
+
+.new-comment{
+    background-color: #ed2553;
+}

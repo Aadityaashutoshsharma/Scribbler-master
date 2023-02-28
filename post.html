@@ -90,17 +90,16 @@
                 </p>
             </div>
             <div class="like-btn">
-                <button id="like-blog" onclick="postLiked()">
-                    <i class="fa fa-thumbs-up"> Like</i>
-
+                <button id="like-blog" onclick="likePost()">
+                    <i class="fa-regular fa-thumbs-up"></i>  Like
                 </button>
-                <span id="comment-count">Be the first one to like this!</span>
+                <span id="like-count">Be the first one to like this!</span>
             </div>
             <div class="comments-container">
                 <form class="comment-body">
                     <label for="comment-content"></label>
-                    <textarea placeholder="Leave a comment..." id="comments-content" rows="5" cols="80" name="Content"></textarea> <br></br>
-                    <button type="button" class="new-comment" onclick="comments()">Comment</button>
+                    <textarea placeholder="Leave a comment..." id="commentsContent" rows="5" cols="80" name="Content"></textarea> <br></br>
+                    <button type="button" class="new-comment" onclick="comments(commentsContent)">Comment</button>
                 </form>
                 <p class="commentHeading">All Comments</p>
                 <div class="commentsBox" id="commentBox">
@@ -110,6 +109,7 @@
             </div>
         </div>
         <script src="scripts/post.js"></script>
+        <script src="https://kit.fontawesome.com/1d266f3084.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -61,13 +61,54 @@ function getSignInData() {
 
 //data storing ended for signing function
 
+//like function
 
-var addEventName = commentEle.value + '<br>';
+var numberOfClicks = 0;
+function likePost() {
+  document.getElementById("like-blog").innerHTML = `<i class="fa fa-thumbs-up" aria-hidden="true"></i>` + " Liked!";
+  numberOfClicks += 1;
+  if (numberOfClicks != 0) {
+    if (numberOfClicks == 1) {
+      document.getElementById("like-count").innerHTML =  numberOfClicks + " person likes this!";
+    } else {
+      document.getElementById("like-count").innerHTML =  numberOfClicks + " people have liked this!";
+    }
+  }
+}
 
-var commentEle = document.getElementById('comments-content');
+//like function ended
 
-function comments() {
-    document.getElementById('commentBox').innerHTML += `<p>${addEventName}</p>`;
+//comment function
+function comments(id) {
+    document.getElementById("commentBox").style.visibility = "visible";
+    var addEventName = id.value + "<br>";
+    var commentEle = document.getElementById("commentsContent");
+    document.getElementById("contentOfComment").innerHTML ='<p style="padding:10px;background-color:white;">' +
+      addEventName +
+      "</p>" + document.getElementById("contentOfComment").innerHTML;
     commentEle.value = commentEle.defaultValue;
-    
+  }
+
+//comment function ended
+
+
+//edit post function
+var edit = false;
+function editPost() {
+  const paragraph = document.getElementById("blog-body");
+  const title = document.getElementById("blogTtileNew");
+  var edit_button = document.getElementById("editPost");
+
+  if (edit == false) {
+    title.contentEditable = true;
+    paragraph.contentEditable = true;
+
+    edit_button.innerHTML = "Save " + `<i class="fa fa-save"></i>`;
+    edit = true;
+  } else {
+    title.contentEditable = false;
+    paragraph.contentEditable = false;
+    edit_button.innerHTML = "Edit " + `<i class="fa fa-edit"></i>`;
+    edit = false;
+  }
 }

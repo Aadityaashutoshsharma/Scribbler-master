@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/post.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
@@ -22,10 +23,54 @@
                 <h3>Explore, Imagine, Create</h3>
             </div>
             <div class="btns">
-                <button id="myBtn" onclick="popUp()">Sign Up</button>
-                <button id="myBtn" onclick="popUp()">Sign In</button>
+                <button id="myBtn" class="my-btn" onclick="popUp()">Sign Up</button>
+                <button id="myBtnSignIn" class="my-btn" onclick="popUp2()">Sign In</button>
             </div>
         </header>
+    </div>
+    <div class="modals">
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+
+                <form class="innerModal" onsubmit="getSignUpData()">
+                    <h4>Get Started <span class="close" onclick="newPopUp()">&times;</span></h4>
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Enter your name" id="name" required />
+                    <label for="">Username</label>
+                    <input type="text" placeholder="Enter your username" id="userName" required />
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" required />
+                    <label for="">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="confirmPassword" required />
+                    <input type="submit" value="Sign Up" id="modal-Btn" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="modals">
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal-signIn" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+
+                <form class="innerModal" onsubmit="getSignInData()">
+                    <h4>Welcome Back! <span class="closeSignIn" onclick="newPopUp2()">&times;</span></h4>
+                    <label for="">Username</label>
+                    <input type="text" placeholder="Enter your username" id="userName" required />
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" required />
+                    <input type="submit" value="Sign In" id="modal-Btn" />
+                </form>
+                <div class="memberSigning">
+                    <span id="memberSignUp">Not a member? <span id="buttonSignUp" onclick="popUp()">SignUp</span></span>
+                </div>
+            </div>
+        </div>
     </div>
     <div>
         <div class="blog-content">
@@ -33,9 +78,9 @@
                 <h id="blogTitleNew">How to create an event in JavaScript</h>
             </div>
             <div class="author">
-                <button type="button" id="editPost" class="editPost-btn" onclick="editPost()">Edit <i
-                        class="fa fa-edit"></i> </button>
-                <p>Add More</p>
+                <p>Aditya Sharma</p>
+                <button type="button" id="editPost" class="editPost-btn" onclick="editPost()">Edit <i class="fa fa-edit"></i> </button>
+                
             </div>
             <div class="insideBlog">
                 <p id="blog-body">
@@ -54,9 +99,8 @@
             <div class="comments-container">
                 <form class="comment-body">
                     <label for="comment-content"></label>
-                    <textarea placeholder="Leave a comment..." id="comments-content" rows="5" cols="80"
-                        name="Content"></textarea> <br>
-                    <button type="button" class="new-comment" onClick="addComment()">Comment</button>
+                    <textarea placeholder="Leave a comment..." id="comments-content" rows="5" cols="80" name="Content"></textarea> <br></br>
+                    <button type="button" class="new-comment" onclick="comments()">Comment</button>
                 </form>
                 <p class="commentHeading">All Comments</p>
                 <div class="commentsBox" id="commentBox">
@@ -65,7 +109,7 @@
                 </div>
             </div>
         </div>
-
+        <script src="scripts/post.js"></script>
 </body>
 
 </html>

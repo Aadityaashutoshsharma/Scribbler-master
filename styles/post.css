@@ -48,3 +48,7 @@
 .new-comment{
     background-color: #ed2553;
 }
+
+.commentsBox {
+    border: 3px solid #aaa;
+}

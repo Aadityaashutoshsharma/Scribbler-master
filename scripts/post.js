@@ -65,6 +65,29 @@ function getSignInData() {
 
 //data storing ended for signing function
 
+//edit post function
+var edit = false;
+function editPost() {
+  const paragraph = document.getElementById("blog-body");
+  const title = document.getElementById("blogTtileNew");
+  var edit_button = document.getElementById("editPost");
+
+  if (edit === false) {
+    title.contentEditable = true;
+    paragraph.contentEditable = true;
+
+    edit_button.innerHTML = "Save " + `<i class="fa fa-save"></i>`;
+    edit = true;
+  } else {
+    title.contentEditable = false;
+    paragraph.contentEditable = false;
+    edit_button.innerHTML = "Edit " + `<i class="fa fa-edit"></i>`;
+    edit = false;
+  }
+}
+
+//edit function ended
+
 //like function
 
 var numberOfClicks = 0;
@@ -86,14 +109,6 @@ function likePost() {
 //like function ended
 
 //comment function
-// function comments(id) {
-//     document.getElementById("commentBox").style.visibility = "visible";
-//     var addEventName = id.value + "<br>";
-//     var commentEle = document.getElementById("commentsContent");
-//     var mainComment = document.getElementById("contentOfComment").innerHTML;
-//     mainComment =`<p style="padding:10px;background-color:white;">${addEventName}</p>${mainComment}`;
-//     commentEle.value = commentEle.defaultValue;
-//   }
 
 var textEle = document.getElementById("commentsContent");
 var commentEle = document.getElementById("newComment");
@@ -101,36 +116,32 @@ var commentEle = document.getElementById("newComment");
 let comments = [];
 
 function getComments() {
-  if (textEle.value !== "") {
-    comments.push(textEle.value);
-
-    commentEle.innerHTML = comments.map((item) => {
-      return `<li class="commentDesign">${item}</li>`;
-    });
-  } else {
-    alert("Please write a comment!");
+    if (textEle.value !== "") {
+      comments.push(textEle.value);
+      for (let i = 0; i < comments.length; i++) {
+        commentEle.innerHTML += `<li class="commentDesign">${comments[i]}</li>`;
+      }
+     
+    } else {
+      alert("Please write a comment!");
+    }  
   }
-}
 
 //comment function ended
 
-//edit post function
-var edit = false;
-function editPost() {
-  const paragraph = document.getElementById("blog-body");
-  const title = document.getElementById("blogTtileNew");
-  var edit_button = document.getElementById("editPost");
+// var textEle = document.getElementById("commentsContent");
+// var commentEle = document.getElementById("newComment");
 
-  if (edit == false) {
-    title.contentEditable = true;
-    paragraph.contentEditable = true;
+// let comments = [];
 
-    edit_button.innerHTML = "Save " + `<i class="fa fa-save"></i>`;
-    edit = true;
-  } else {
-    title.contentEditable = false;
-    paragraph.contentEditable = false;
-    edit_button.innerHTML = "Edit " + `<i class="fa fa-edit"></i>`;
-    edit = false;
-  }
-}
+// function getComments() {
+//   if (textEle.value !== "") {
+//     comments.push(textEle.value);
+//     var newComment = comments.map((item) => {
+//       return `<li class="commentDesign">${item}</li>`;
+//     });
+//     newComment.join = "";
+//   }else {
+//     alert("Please write a comment");
+//   }
+// }

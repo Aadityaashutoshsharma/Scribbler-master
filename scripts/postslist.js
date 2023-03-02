@@ -68,6 +68,7 @@ function deletingPost() {
     deleteEle.remove();
 }
 
+//function to remove the delete prompt
 var dltEle = document.getElementById("deleteBlogPrompt");
 
 function closeDelete(){

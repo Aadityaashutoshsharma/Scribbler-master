@@ -61,5 +61,8 @@
 
 .commentDesign{
     list-style-type: none;
-    border: 1px solid red;
+    border: 15px solid #f1f1f1;
+    border-radius: 10px;
+    width: 50%;
+    height: 5vh;
 }

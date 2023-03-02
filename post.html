@@ -8,13 +8,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/post.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/common.css">
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="firstContainer">
+
+        <!-- This is the main heading of the page -->
+
         <header>
             <div class="logo">
                 <a href="index.html">
@@ -28,6 +31,9 @@
             </div>
         </header>
     </div>
+
+    <!-- signup modal -->
+
     <div class="modals">
         <!-- Trigger/Open The Modal -->
         <!-- The Modal -->
@@ -51,6 +57,11 @@
             </div>
         </div>
     </div>
+
+    <!-- signup modal ended -->
+
+    <!-- signin modal -->
+
     <div class="modals">
         <!-- Trigger/Open The Modal -->
         <!-- The Modal -->
@@ -72,7 +83,11 @@
             </div>
         </div>
     </div>
-    <div>
+
+    <!-- signin modal ended -->
+    <!-- main heading ended -->
+
+    <!-- blog container -->
         <div class="blog-content">
             <div id="blog-title" class="blog-Title">
                 <h id="blogTitleNew">How to create an event in JavaScript</h>
@@ -89,12 +104,17 @@
                     females in the People and Arts category, while males focus more on Geography and Science.
                 </p>
             </div>
+
+            <!-- like container -->
             <div class="like-btn">
                 <button id="like-blog" onclick="likePost()">
                     <i class="fa-regular fa-thumbs-up"></i>  Like
                 </button>
                 <span id="like-count">Be the first one to like this!</span>
             </div>
+            <!-- like container ended -->
+
+            <!-- comments container -->
             <div class="comments-container">
                 <form class="comment-body">
                     <label for="comment-content"></label>
@@ -106,7 +126,12 @@
                     <div class="contentOfComment" id="newComment"></div>
                 </div>
             </div>
+            <!-- comments container ended -->
         </div>
+
+        <!-- blog container ended -->
+
+        <!-- scripts files -->
         <script src="scripts/post.js"></script>
         <script src="https://kit.fontawesome.com/1d266f3084.js" crossorigin="anonymous"></script>
 </body>

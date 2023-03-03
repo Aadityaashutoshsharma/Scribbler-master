@@ -47,12 +47,18 @@ spanSignIn.newPopUp2 = () => {
     modalSignIn.style.display = "none";
 }
 
+
 //SignIn function ended
 
 //Prompt for deleting a post 
 
 var deletePostEle = document.getElementById('deleteBlogPrompt');
-console.log(deletePostEle);
+var deleteModalEle1 = document.getElementById('post1');
+var deleteModalEle2 = document.getElementById('post2');
+var deleteModalEle3 = document.getElementById('post3');
+var deleteModalEle4 = document.getElementById('post4');
+var deleteModalEle5 = document.getElementById('post5');
+
 
 function deletePost() {
     deletePostEle.style.display = "flex";
@@ -62,10 +68,9 @@ function deletePost() {
 
 //deleting a post
 
-var deleteEle = document.getElementsByClassName('posts')[0];
-
 function deletingPost() {
-    deleteEle.remove();
+    deleteModalEle1.style.display ="none";
+    
 }
 
 //function to remove the delete prompt
@@ -73,4 +78,13 @@ var dltEle = document.getElementById("deleteBlogPrompt");
 
 function closeDelete(){
     dltEle.style.display = "none";
+}
+
+
+//function to open the post
+function openPost(userName,blogTitle,blogContent){
+    let url = `./post.html?blogTitle=${encodeURIComponent(blogTitle.innerText)}&userName=${encodeURIComponent(
+        userName.innerText
+    )}&blogContent=${encodeURIComponent(blogContent.innerText)}`;
+    window.location.href=url;
 }

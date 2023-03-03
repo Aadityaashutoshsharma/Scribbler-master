@@ -3,28 +3,59 @@ body {
 }
 
 .postContainer {
+  display: flex; 
   height: 70%;
-  width: 80%;
-  display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-around;
   margin-top: 2%;
-  margin-left: 10%;
 }
 
-.posts {
-  display: inline-table;
+#post1 {
   width: 40%;
-  height: 20%;
   background: #fff;
   box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
   margin: 10px 10px 10px 20px;
-  float: left;
+  cursor: pointer;
   border-radius: 15px;
 }
 
-.posts:hover {
+#post2 {
+  width: 40%;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+  margin: 10px 10px 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#post3 {
+  width: 40%;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+  margin: 10px 10px 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#post4 {
+  width: 40%;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+  margin: 10px 10px 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#post5 {
+  width: 40%;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+  margin: 10px 10px 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#post1:hover, #post2:hover, #post3:hover, #post4:hover, #post5:hover {
   box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -90,6 +121,7 @@ body {
   color: #f44336;
   cursor: pointer;
 }
+
 .deletePrompt {
   display: none;
   position: fixed;
@@ -115,6 +147,7 @@ body {
   overflow: hidden;
   color: #000;
   font-family: "Ubuntu Mono", monospace;
+  border-radius: 15px;
 }
 
 .deleteContainer {
@@ -136,6 +169,7 @@ body {
   padding: 5px 25px;
   cursor: pointer;
 }
+
 .notDelete {
   background-color: #f44336;
   color: white;

@@ -60,6 +60,7 @@ var deleteModalEle4 = document.getElementById('post4');
 var deleteModalEle5 = document.getElementById('post5');
 
 
+
 function deletePost() {
     deletePostEle.style.display = "flex";
 }
@@ -68,9 +69,13 @@ function deletePost() {
 
 //deleting a post
 
-function deletingPost() {
-    deleteModalEle1.style.display ="none";
+// function deletingPost() {
+
+//     document.getElementsByClassName('postContainer')[1].remove();
     
+// }
+deletingPost = () => {
+    deleteModalEle1.style.display = "none";
 }
 
 //function to remove the delete prompt
@@ -83,7 +88,7 @@ function closeDelete(){
 
 //function to open the post
 function openPost(userName,blogTitle,blogContent){
-    let url = `./post.html?blogTitle=${encodeURIComponent(blogTitle.innerText)}&userName=${encodeURIComponent(
+    let url = `../html/post.html?blogTitle=${encodeURIComponent(blogTitle.innerText)}&userName=${encodeURIComponent(
         userName.innerText
     )}&blogContent=${encodeURIComponent(blogContent.innerText)}`;
     window.location.href=url;

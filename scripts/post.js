@@ -135,11 +135,7 @@ let comments = [];
 
 function getComments() {
     if (textEle.value !== "") {
-      comments.push(textEle.value);
-      for (let i = 0; i < comments.length; i++) {
-        commentEle.innerHTML += `<li class="commentDesign">${comments[i]}</li>`;
-      }
-     
+      commentEle.innerHTML += `<li class="commentDesign">${textEle.value}</li>`;     
     } else {
       alert("Please write a comment!");
     }  
@@ -159,12 +155,12 @@ window.onload=()=>{
           }
       }
   }
-  if(queryString.blogTitle !=null && queryString.userName !=null){
+  if(queryString.blogTitle !=null && queryString.userName !=null && queryString.blogContent != null){
       const{ blogTitle } = queryString;
       const{ userName }  = queryString;
       const{ blogContent } = queryString;
       document.getElementsByClassName('blog-Title')[0].innerHTML = blogTitle;
       document.getElementsByClassName('author')[0].innerHTML = userName;
-      document.getElementsByClassName('blogContents')[0].innerHTML = blogContent;
+      document.getElementsByClassName('contentOfBlog')[0].innerHTML = blogContent;
   }
 }

@@ -1,64 +1,72 @@
-.blog-content{
-    padding: 0 50px;
+/* main body of blog */
+.blog-content {
+  padding: 0 50px;
 }
 
+/* title style */
 .blog-Title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
-#blogTitleNew{
-    font-size: 25px;
-    font-weight: bolder;
+/* author style */
+.author {
+  font-size: 40px;
+  font-weight: bolder;
 }
 
-.author p{
-    font-size: 20px;
-    font-weight: bolder;
+/* edit button style */
+.author button {
+  float: right;
+  color: white;
+  border: 1px solid #ed2553;
+  background-color: #ed2553;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: -45px;
 }
 
-.author button{
-    float: right;
-    color: white;
-    border: 1px solid #ed2553;
-    background-color: #ed2553;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: -45px;
+.insideBlog p {
+  font-weight: bolder;
 }
 
-.insideBlog p{
-    font-weight: bolder;
-} 
-
-.actionOnBlog{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.contentOfBlog {
+  font-size: 20px;
 }
 
+/* blog view style */
+.actionOnBlog {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* styling like button */
 .like-btn button {
-    color: white;
-    background-color: #ed2553;
-    border: 1px solid #ed2553;
-    padding: 5px 10px;
+  color: white;
+  background-color: #ed2553;
+  border: 1px solid #ed2553;
+  padding: 5px 10px;
 }
 
-.comments-container{
-    margin-top: 65px;
+/* comment container styling */
+.comments-container {
+  margin-top: 65px;
 }
 
-.new-comment{
-    background-color: #ed2553;
-    border: 1px solid #ed2553;
-    color: white;
-    padding: 5px 10px;
+.new-comment {
+  background-color: #ed2553;
+  border: 1px solid #ed2553;
+  color: white;
+  padding: 5px 10px;
 }
 
-.commentDesign{
-    list-style-type: none;
-    border: 15px solid #f1f1f1;
-    border-radius: 10px;
-    width: 50%;
-    height: 5vh;
+.commentDesign {
+  list-style-type: none;
+  border: 15px solid #f1f1f1;
+  border-radius: 10px;
+  width: 50%;
+  height: 5vh;
 }

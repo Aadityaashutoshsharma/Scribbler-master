@@ -18,11 +18,12 @@
 }
 
 /* edit button style */
-.author button {
+#editingPost {
   float: right;
   color: white;
   border: 1px solid #ed2553;
   background-color: #ed2553;
+  box-shadow: 0 2px 4px 0 #ed2553, 0 3px 10px 0 #ed2553;
   padding: 5px 10px;
   cursor: pointer;
   margin-top: -45px;
@@ -56,6 +57,7 @@
   margin-top: 65px;
 }
 
+/* Adding designs to comment button */
 .new-comment {
   background-color: #ed2553;
   border: 1px solid #ed2553;
@@ -63,6 +65,7 @@
   padding: 5px 10px;
 }
 
+/* Adding designs to comment section */
 .commentDesign {
   list-style-type: none;
   border: 15px solid #f1f1f1;

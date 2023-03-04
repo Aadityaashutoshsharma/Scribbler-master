@@ -68,6 +68,7 @@ function getSignInData() {
 //edit post function
 var titleOfPost = document.getElementById("blog-title");
 var contentOfPost = document.getElementById("blog-body");
+var editButton = document.getElementById('editingPost');
 
 let queryString = new Array();
 let edit = false;
@@ -82,16 +83,19 @@ function editPost() {
         titleOfPost.style.borderStyle='solid';
         titleOfPost.contentEditable='true';
         contentOfPost.contentEditable='true';
-        contentOft.style.borderWidth='2px';
+        contentOfPost.style.borderWidth='2px';
         contentOfPost.style.borderColor='red';
         contentOfPost.style.borderStyle='solid';
 
-        document.getElementById('editingPost').innerHTML='save<i class="fa fa-save"></i></button>'    
-  }
-  else {
+        editButton.innerHTML =`Save<i class="fa fa-save" value="Save "></i>`;
+        console.log(editButton);    
+  }else {
     if(num==2){
-      titleOfPost.innerHTML = `<span>UPDATED:</span>${temp.innerHTML}`;
-      contentOfPost.innerHTML = `<div>UPDATED:</div>${temp.innerHTML}`;
+      var temp = document.getElementById('blog-title');
+            document.getElementById('blog-title').innerHTML = `<span>UPDATED:</span>${temp.innerHTML}`;
+
+            var temp = document.getElementById('blog-body');
+            document.getElementById('blog-body').innerHTML = `<div>UPDATED:</div>${temp.innerHTML}`;
     }
     contentOfPost.style.border = 'none';
     contentOfPost.contentEditable = 'false';

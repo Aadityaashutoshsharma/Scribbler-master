@@ -62,24 +62,25 @@ var deleteModalEle5 = document.getElementById('post5');
 
 
 function deletePost() {
-    deletePostEle.style.display = "flex";
+    deletePostEle.style.display = "block";
 }
 
 //prompt ended
 
 //deleting a post
+var dltEle = document.getElementById("deleteBlogPrompt");
 
-// function deletingPost() {
 
-//     document.getElementsByClassName('postContainer')[1].remove();
-    
-// }
-deletingPost = () => {
+function deletingPost() {
     deleteModalEle1.style.display = "none";
+    deleteModalEle2.style.display = "none";
+    deleteModalEle3.style.display = "none";
+    deleteModalEle4.style.display = "none";
+    deleteModalEle5.style.display = "none";
+    dltEle.style.display = "none";
 }
 
 //function to remove the delete prompt
-var dltEle = document.getElementById("deleteBlogPrompt");
 
 function closeDelete(){
     dltEle.style.display = "none";

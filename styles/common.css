@@ -13,31 +13,24 @@
 }
 
 .modal-content {
-  background-color: #fefefe;
-  padding: 20px;
+  background: linear-gradient(to right, #ffffff, #abbaab);
+  padding: 10px;
   border: 1px solid #888;
   width: 20vw;
-  border: 10px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
-
-.innerModal h4{
-    font-size: 30px;
+.innerModal h4 {
+  font-size: 30px;
 }
-
 
 .innerModal {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-family: 'Roboto Mono', monospace;
+  gap: 5px;
+  font-family: "Roboto Mono", monospace;
   font-weight: bolder;
   font-size: 20px;
-}
-
-.innerModal label {
-  margin-top: -20px;
 }
 
 .innerModal input {
@@ -47,7 +40,7 @@
 }
 
 #modal-Btn {
-  background-color: green;
+  background: linear-gradient(to right, #a8e063, #56ab2f);
   border: green;
   color: white;
   border-radius: 2px;
@@ -58,7 +51,7 @@
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -72,7 +65,7 @@
 }
 
 .closeSignIn {
-  color: #aaa;
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -95,4 +88,13 @@
 #buttonSignUp {
   color: blue;
   cursor: pointer;
+}
+
+@media screen and (max-width: 412) {
+  .modal-content {
+    background: linear-gradient(to right, #ffffff, #abbaab);
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 10px;
+  }
 }

@@ -87,20 +87,22 @@
             <div id="postModal" class="modal">
                 <!-- Modal content -->
                 <div class="postModal-content">
-    
-                    <div class="innerPostModal" >
-                        <span class="heading">Pen Your Post <span class="closePost" onclick="closePost()">&times;</span></span>
+
+                    <div class="innerPostModal">
+                        <span class="heading">Pen Your Post <span class="closePost"
+                                onclick="closePost()">&times;</span></span>
                         <label for="">Title</label>
                         <input type="text" placeholder="Enter title of your post" id="title" required />
                         <label for="">Content</label>
                         <textarea placeholder="Enter contents of your post" id="content" required></textarea>
                         <!-- <input type="submit" value="Create" id="createButton" /> -->
-                        <a href="html/postslist.html"><button onclick="getPostData(title, content)" id="createButton">Create</button></a>
+                        <a href="html/postslist.html"><button onclick="getPostData(title, content)"
+                                id="createButton">Create</button></a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
     <script src="../scripts/index.js"></script>
 </body>

@@ -37,11 +37,31 @@ h3 {
 }
 
 .my-btn {
-  background-color: #0101ff;
+  background: linear-gradient(
+    to right,
+    #2948ff,
+    #396afc
+  );
   color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid #667db6;
   font-weight: bolder;
   padding: 10px 20px;
   cursor: pointer;
   text-align: center;
+  border-radius: 1px;
+}
+
+#myBtn {
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: 412px){
+  header{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+  }
 }

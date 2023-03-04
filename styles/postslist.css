@@ -1,5 +1,5 @@
 body {
-  background-color: #ffeedd;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
 }
 
 .postContainer {
@@ -8,6 +8,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 30px;
 }
 
 #post1 {
@@ -85,7 +88,6 @@ body {
   color: #2b312b;
   font-size: 20px;
   overflow: hidden;
-  display: block;
   height: 25px;
 }
 
@@ -115,6 +117,7 @@ body {
   width: 10%;
   background-color: #e8e8e8;
   cursor: pointer;
+  border-style: none;
 }
 
 .deleteBlog:hover,
@@ -142,9 +145,9 @@ body {
   background-color: #fefefe;
   margin: 15% auto auto auto;
   border: 1px solid #fff;
-  width: 18%;
   padding: 20px 20px 20px 20px;
   opacity: 1;
+  width: 18vw;
   overflow: hidden;
   color: #000;
   font-family: "Ubuntu Mono", monospace;
@@ -178,3 +181,74 @@ body {
   padding: 5px 25px;
   cursor: pointer;
 }
+
+@media screen and (max-width:412px) {
+  .postContainer{
+    display: block;
+    margin-left: -1%;
+  }
+  #post1 {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  #post2 {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  #post3 {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  #post4 {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  #post5 {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+  .deleteContent {
+    background-color: #fefefe;
+    margin: 55% auto auto auto;
+    border: 1px solid #fff;
+    padding: 20px 20px 20px 20px;
+    opacity: 1;
+    overflow: hidden;
+    color: #000;
+    font-family: "Ubuntu Mono", monospace;
+    border-radius: 15px;
+  }
+
+  .buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+  }
+}
+

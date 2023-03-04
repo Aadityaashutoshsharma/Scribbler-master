@@ -13,7 +13,12 @@ body {
 }
 
 #posts {
-  background-color: #cfb53b;
+  background: linear-gradient(
+    to right,
+    #d2e42e,
+    #fffc00
+  );
+  font-size: large;
   border: 1px solid #dddddd;
   padding: 10px 20px;
   text-align: center;
@@ -21,7 +26,7 @@ body {
 }
 
 .postModal-content {
-  background-color: #fefefe;
+  background: linear-gradient(to right, #ffffff, #abbaab);
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -38,13 +43,13 @@ body {
 
 .heading {
   font-size: 35px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .innerPostModal label {
   font-size: 25px;
   font-weight: bolder;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .innerPostModal input {
@@ -63,7 +68,7 @@ body {
 }
 
 .closePost {
-  color: #aaa;
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -77,13 +82,19 @@ body {
 }
 
 #createButton {
-  background-color: green;
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  font-size: larger;
   border: green;
   color: white;
-  width: 5vw;
   height: 3vh;
   margin-left: 37vw;
   border-radius: 2px;
-  padding: 3px 5px 5px 5px;
+  padding: 3px 15px 15px 15px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 412px) {
+  #createButton{
+    margin-left: 30vw;
+  } 
 }

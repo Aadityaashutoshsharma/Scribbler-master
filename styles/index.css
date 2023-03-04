@@ -8,18 +8,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 77vh;
+  min-height: 70vh;
   gap: 20px;
 }
 
 #posts {
-  background: linear-gradient(
-    to right,
-    #d2e42e,
-    #fffc00
-  );
+  background: linear-gradient(to right, #d2e42e, #fffc00);
+  border: 2px solid #abbaab;
+  border-radius: 4px;
   font-size: large;
-  border: 1px solid #dddddd;
   padding: 10px 20px;
   text-align: center;
   cursor: pointer;
@@ -31,14 +28,13 @@ body {
   border: 1px solid #888;
   width: 80%;
   height: 80%;
-  border: 1px solid white;
   border-radius: 15px;
 }
 
 .innerPostModal {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .heading {
@@ -87,14 +83,15 @@ body {
   border: green;
   color: white;
   height: 3vh;
-  margin-left: 37vw;
+  margin-left: 35vw;
+  width: 5vw;
   border-radius: 2px;
-  padding: 3px 15px 15px 15px;
+  padding: 0 15px 15px 10px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 412px) {
-  #createButton{
+  #createButton {
     margin-left: 30vw;
-  } 
+  }
 }

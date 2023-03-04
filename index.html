@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ScriBBler</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/common.css">
@@ -31,7 +31,7 @@
         </header>
 
         <div class="middle-container">
-            <a href="html/postslist.html"><button id="posts">All Posts</button></a>
+            <button id="posts" class="posting" onclick="openHome()">All Posts</button>
             <button id="posts" onclick="createPost()">Create Posts</button>
         </div>
     </div>
@@ -96,8 +96,7 @@
                         <label for="">Content</label>
                         <textarea placeholder="Enter contents of your post" id="content" required></textarea>
                         <!-- <input type="submit" value="Create" id="createButton" /> -->
-                        <a href="html/postslist.html"><button onclick="getPostData(title, content)"
-                                id="createButton">Create</button></a>
+                        <button onclick="getPostData(title, content)" id="createButton">Create</button>
                     </div>
                 </div>
             </div>

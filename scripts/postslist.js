@@ -5,15 +5,14 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 btn.popUp = () => {
-    modal.style.display = "flex";
-}
+  modal.style.display = "flex";
+};
 
 span.newPopUp = () => {
-    modal.style.display = "none";
-}
+  modal.style.display = "none";
+};
 
 //SignUp Function Ended
-
 
 //Data stored in SignUp Modal
 var nameEle = document.getElementById("name");
@@ -21,10 +20,15 @@ var userNameEle = document.getElementById("userName");
 var passwordEle = document.getElementById("password");
 var confirmPasswordEle = document.getElementById("confirmPassword");
 
-function getSignUpData(){
-    if(nameEle && userNameEle && passwordEle && confirmPasswordEle){
-         console.log(nameEle.value,userNameEle.value,passwordEle.value,confirmPasswordEle.value);
-    }
+function getSignUpData() {
+  if (nameEle && userNameEle && passwordEle && confirmPasswordEle) {
+    console.log(
+      nameEle.value,
+      userNameEle.value,
+      passwordEle.value,
+      confirmPasswordEle.value
+    );
+  }
 }
 //Function ended for data storing
 
@@ -35,62 +39,51 @@ var btnSignUp = document.getElementById("buttonSignUp");
 var spanSignIn = document.getElementsByClassName("closeSignIn")[0];
 
 btnSignUp.popUp = () => {
-    modal.style.display="flex";
-    modalSignIn.style.display="none";
-}
+  modal.style.display = "flex";
+  modalSignIn.style.display = "none";
+};
 
 btnSignIn.popUp2 = () => {
-    modalSignIn.style.display = "flex";
-}
+  modalSignIn.style.display = "flex";
+};
 
 spanSignIn.newPopUp2 = () => {
-    modalSignIn.style.display = "none";
-}
-
+  modalSignIn.style.display = "none";
+};
 
 //SignIn function ended
 
-//Prompt for deleting a post 
+var deletePostModal = document.getElementById("deletePostModal");
+var deletePostModalIcon = document.getElementById("dltIcon");
+var deletePostModalspan = document.getElementById("notDlt");
 
-var deletePostEle = document.getElementById('deleteBlogPrompt');
-var deleteModalEle1 = document.getElementById('post1');
-var deleteModalEle2 = document.getElementById('post2');
-var deleteModalEle3 = document.getElementById('post3');
-var deleteModalEle4 = document.getElementById('post4');
-var deleteModalEle5 = document.getElementById('post5');
-
-
-
-function deletePost() {
-    deletePostEle.style.display = "block";
+deletePostModalIcon.onclick = function () {
+  deletePostModal.style.display = "block";
+};
+deletePostModalspan.onclick = function () {
+  deletePostModal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == deletePostModal) {
+    deletePostModal.style.display = "none";
+  }
+};
+var id = "";
+function setId(htmlId) {
+  deletePostModal.style.display = "block";
+  id = htmlId;
 }
-
-//prompt ended
-
-//deleting a post
-var dltEle = document.getElementById("deleteBlogPrompt");
-
-
-function deletingPost() {
-    deleteModalEle1.style.display = "none";
-    deleteModalEle2.style.display = "none";
-    deleteModalEle3.style.display = "none";
-    deleteModalEle4.style.display = "none";
-    deleteModalEle5.style.display = "none";
-    dltEle.style.display = "none";
+function dltPost() {
+  deletePostModal.style.display = "none";
+  document.getElementById(id).style.display = "none";
 }
-
-//function to remove the delete prompt
-
-function closeDelete(){
-    dltEle.style.display = "none";
-}
-
 
 //function to open the post
-function openPost(userName,blogTitle,blogContent){
-    let url = `../html/post.html?blogTitle=${encodeURIComponent(blogTitle.innerText)}&userName=${encodeURIComponent(
-        userName.innerText
-    )}&blogContent=${encodeURIComponent(blogContent.innerText)}`;
-    window.location.href=url;
+function openPost(userName, blogTitle, blogContent) {
+  let url = `../html/post.html?blogTitle=${encodeURIComponent(
+    blogTitle.innerText
+  )}&userName=${encodeURIComponent(
+    userName.innerText
+  )}&blogContent=${encodeURIComponent(blogContent.innerText)}`;
+  window.location.href = url;
 }

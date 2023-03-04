@@ -7,13 +7,13 @@
 .blog-Title {
   display: flex;
   justify-content: center;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bolder;
 }
 
 /* author style */
 .author {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
 }
 
@@ -68,7 +68,7 @@
 /* Adding designs to comment section */
 .commentDesign {
   list-style-type: none;
-  border: 15px solid #f1f1f1;
+  border: 15px solid lightgrey;
   border-radius: 10px;
   width: 50%;
   height: 5vh;

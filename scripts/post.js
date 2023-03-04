@@ -68,44 +68,47 @@ function getSignInData() {
 //edit post function
 var titleOfPost = document.getElementById("blog-title");
 var contentOfPost = document.getElementById("blog-body");
-var editButton = document.getElementById('editingPost');
+var editButton = document.getElementById("editingPost");
 
 let queryString = new Array();
 let edit = false;
 let num = 0;
 
 function editPost() {
-  num+=1;
-  if(!edit) {
+  num += 1;
+  if (!edit) {
     edit = true;
-        titleOfPost.style.borderWidth='2px';
-        titleOfPost.style.borderColor='red';
-        titleOfPost.style.borderStyle='solid';
-        titleOfPost.contentEditable='true';
-        contentOfPost.contentEditable='true';
-        contentOfPost.style.borderWidth='2px';
-        contentOfPost.style.borderColor='red';
-        contentOfPost.style.borderStyle='solid';
+    titleOfPost.style.borderWidth = "2px";
+    titleOfPost.style.borderColor = "red";
+    titleOfPost.style.borderStyle = "solid";
+    titleOfPost.contentEditable = "true";
+    contentOfPost.contentEditable = "true";
+    contentOfPost.style.borderWidth = "2px";
+    contentOfPost.style.borderColor = "red";
+    contentOfPost.style.borderStyle = "solid";
 
-        editButton.innerHTML =`Save<i class="fa fa-save" value="Save "></i>`;
-        console.log(editButton);    
-  }else {
-    if(num==2){
-      var temp = document.getElementById('blog-title');
-            document.getElementById('blog-title').innerHTML = `<span>UPDATED:</span>${temp.innerHTML}`;
+    editButton.innerHTML = `Save<i class="fa fa-save" value="Save "></i>`;
+  } else {
+    if (num == 2) {
+      var temp = document.getElementById("blog-title");
+      document.getElementById(
+        "blog-title"
+      ).innerHTML = `<span>UPDATED:</span>${temp.innerHTML}`;
 
-            var temp = document.getElementById('blog-body');
-            document.getElementById('blog-body').innerHTML = `<div>UPDATED:</div>${temp.innerHTML}`;
+      var temp = document.getElementById("blog-body");
+      document.getElementById(
+        "blog-body"
+      ).innerHTML = `<div>UPDATED:</div>${temp.innerHTML}`;
     }
-    contentOfPost.style.border = 'none';
-    contentOfPost.contentEditable = 'false';
-    titleOfPost.style.border = 'none';
-    titleOfPost.contentEditable = 'false';
+    contentOfPost.style.border = "none";
+    contentOfPost.contentEditable = "false";
+    titleOfPost.style.border = "none";
+    titleOfPost.contentEditable = "false";
 
-    document.getElementById('editingPost').innerHTML =
-                'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i>';
-        document.getElementById('editingPost').disabled = true;
-  } 
+    document.getElementById("editingPost").innerHTML =
+      'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i>';
+    document.getElementById("editingPost").disabled = true;
+  }
 }
 
 //edit function ended
@@ -138,33 +141,34 @@ var commentEle = document.getElementById("newComment");
 let comments = [];
 
 function getComments() {
-    if (textEle.value !== "") {
-      commentEle.innerHTML += `<li class="commentDesign">${textEle.value}</li>`;     
-    } else {
-      alert("Please write a comment!");
-    }  
+  if (textEle.value !== "") {
+    commentEle.innerHTML += `<li class="commentDesign">${textEle.value}</li>`;
+  } else {
+    alert("Please write a comment!");
   }
+}
 
 //comment function ended
 
-
-window.onload=()=>{
-  if (queryString.length==0) {
-      if (window.location.search.split('?').length>1) {
-          const param = window.location.search.split('?')[1].split('&');
-          for(let i = 0;i<param.length;i++){
-              const key = param[i].split('=')[0];
-              const value = decodeURIComponent(param[i].split('=')[1]);
-              queryString[key]=value;
-          }
+//this function will accept the post from postslist and edit the post content
+window.onload = () => {
+  if (queryString.length == 0) {
+    if (window.location.search.split("?").length > 1) {
+      const param = window.location.search.split("?")[1].split("&");
+      for (let i = 0; i < param.length; i++) {
+        const key = param[i].split("=")[0];
+        const value = decodeURIComponent(param[i].split("=")[1]);
+        queryString[key] = value;
       }
+    }
   }
-  if(queryString.blogTitle !=null && queryString.userName !=null && queryString.blogContent != null){
-      const{ blogTitle } = queryString;
-      const{ userName }  = queryString;
-      const{ blogContent } = queryString;
-      document.getElementsByClassName('blog-Title')[0].innerHTML = blogTitle;
-      document.getElementsByClassName('author')[0].innerHTML = userName;
-      document.getElementsByClassName('contentOfBlog')[0].innerHTML = blogContent;
+  if (
+    queryString.blogTitle != null && queryString.userName != null && queryString.blogContent != null) {
+    const { blogTitle } = queryString;
+    const { userName } = queryString;
+    const { blogContent } = queryString;
+    document.getElementsByClassName("blog-Title")[0].innerHTML = blogTitle;
+    document.getElementsByClassName("author")[0].innerHTML = userName;
+    document.getElementsByClassName("contentOfBlog")[0].innerHTML = blogContent;
   }
-}
+};

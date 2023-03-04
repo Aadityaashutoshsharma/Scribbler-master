@@ -61,6 +61,15 @@ function getSignInData() {
 
 //data storing ended for signing function
 
+//All Post Function
+var posting = document.getElementsByClassName("posting")[0];
+posting.addEventListener('click', newPage);
+function newPage() {
+    window.location.href = "html/postslist.html";
+}
+
+//All post ended
+
 //Post function
 var modalPost = document.getElementById("postModal");
 var btnCreate = document.getElementById("posts");

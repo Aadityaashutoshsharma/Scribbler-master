@@ -1,3 +1,5 @@
+//This file will be used for javascript functionallity in the Index.html
+
 // SignUp Button Function
 
 var modal = document.getElementById("myModal");

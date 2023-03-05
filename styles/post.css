@@ -29,10 +29,12 @@
   margin-top: -45px;
 }
 
+/* Blog Paragraph design */
 .insideBlog p {
   font-weight: bolder;
 }
 
+/* main content of blog */
 .contentOfBlog {
   font-size: 20px;
 }
@@ -52,9 +54,19 @@
   padding: 5px 10px;
 }
 
+/* like counts design */
+#like-count{
+  margin-top: 5px;
+}
+
 /* comment container styling */
 .comments-container {
   margin-top: 65px;
+}
+
+/* textarea of comments */
+#commentsContent {
+  width: 70%;
 }
 
 /* Adding designs to comment button */
@@ -68,7 +80,10 @@
 /* Adding designs to comment section */
 .commentDesign {
   list-style-type: none;
-  border: 15px solid lightgrey;
+  border-top: 15px solid lightgrey;
+  border-bottom: 15px solid lightgrey;
+  border-left: 10px solid lightgrey;
+  border-right: 10px solid lightgrey;
   border-radius: 10px;
   width: 50%;
   height: 5vh;

@@ -1,12 +1,16 @@
+/* main body design */
 body {
   background: linear-gradient(to right, #ffdde1, #ee9ca7);
 }
 
+/* postList container design */
 #postList{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+/* post cards design */
 #post1 , #post2 , #post3 , #post4 , #post5{
   display: flex;
   font-size: 1rem;
@@ -15,9 +19,13 @@ body {
   margin: 10px;
   box-shadow: 0px 0px 10px  black;
 }
+
+/* post card on hover design */
 #post1:hover , #post2:hover , #post3:hover , #post4:hover , #post5:hover{
   box-shadow: 2px 5px 25px black;
 }
+
+/* post author design */
 #postBy{
   background-color: white;
   border-bottom-left-radius: 15px;
@@ -27,6 +35,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* post content design */
 #postContent{
   display: flex;
   flex-direction: column;
@@ -35,28 +45,40 @@ body {
   border-bottom-right-radius: 15px;
   padding: 2%;
 }
+
+/* header design of post content */
 #postContent-header{
   color: rgb(157, 157, 157);
   display: flex;
   justify-content: space-between;
 }
+
+/* delete icon design */
 #dltIcon{
   color: rgb(145, 145, 145);
   cursor: pointer;
 }
+
+/* blog content design */
 #description1,#description2,#description3,#description4,#description5{
   height: 5vh;
   overflow: hidden;
 }
+
+/* footer design on post */
 #postContentFooter{
   display: flex;
   justify-content: flex-end;
   padding: 1%;
 }
+
+/* opening the post design */
 #menuIcon{
   color: rgb(145, 145, 145);
   cursor: pointer;
 }
+
+/* deleting the post design */
 #deletePostModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -84,6 +106,8 @@ body {
   justify-content: space-around;
   flex-direction: column;
 }
+
+/* delete modal options */
 #option{
   width: 100%;
   height: 30%;
@@ -91,6 +115,8 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+/* Yes button design */
 #dlt{
   border: none;
   width: 25%;
@@ -99,6 +125,8 @@ body {
   font-weight: bolder;
   border-radius: 2px;
 }
+
+/* no button design */
 #notDlt{
   border: none;
   width: 25%;

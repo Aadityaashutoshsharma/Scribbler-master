@@ -75,9 +75,11 @@ let edit = false;
 let num = 0;
 
 function editPost() {
+  var newEdit = false;
   num += 1;
-  if (!edit) {
+  if (!edit) {  //this will change the design of Title and Content of the blog when edit is clicked
     edit = true;
+    newEdit = true;
     titleOfPost.style.borderWidth = "2px";
     titleOfPost.style.borderColor = "red";
     titleOfPost.style.borderStyle = "solid";
@@ -86,28 +88,25 @@ function editPost() {
     contentOfPost.style.borderWidth = "2px";
     contentOfPost.style.borderColor = "red";
     contentOfPost.style.borderStyle = "solid";
-
-    editButton.innerHTML = `Save<i class="fa fa-save" value="Save "></i>`;
+    editButton.innerHTML = `Save <i class="fa fa-save"></i>`;
   } else {
-    if (num == 2) {
-      var temp = document.getElementById("blog-title");
-      document.getElementById(
-        "blog-title"
-      ).innerHTML = `<span>UPDATED:</span>${temp.innerHTML}`;
-
-      var temp = document.getElementById("blog-body");
-      document.getElementById(
-        "blog-body"
-      ).innerHTML = `<div>UPDATED:</div>${temp.innerHTML}`;
+    if (num == 2) { //this will save the updated title and content when save is clicked
+      titleOfPost.innerHTML = `<span>UPDATED:</span>${titleOfPost.innerHTML}`;
+      contentOfPost.innerHTML = `<div>UPDATED:</div>${contentOfPost.innerHTML}`;
+      editButton.innerHTML = `Edit <i class="fa fa-edit"></i>`;
+      contentOfPost.style.border = "none";
+      titleOfPost.style.border = "none";
     }
-    contentOfPost.style.border = "none";
-    contentOfPost.contentEditable = "false";
-    titleOfPost.style.border = "none";
-    titleOfPost.contentEditable = "false";
-
-    document.getElementById("editingPost").innerHTML =
-      'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i>';
-    document.getElementById("editingPost").disabled = true;
+    else { //this will keep the changes made after edit
+      titleOfPost.innerHTML = `${titleOfPost.innerHTML}`;
+      contentOfPost.innerHTML = `${contentOfPost.innerHTML}`;
+      editButton.innerHTML = `Edit <i class="fa fa-edit"></i>`;
+      contentOfPost.style.border = "none";
+      titleOfPost.style.border = "none";
+    }
+  }
+  if(!newEdit) { //this will allow us to edit the blog multiple times
+    edit = false;
   }
 }
 
@@ -116,7 +115,7 @@ function editPost() {
 //like function
 
 var numberOfClicks = 0;
-function likePost() {
+function likePost() { //this function will increase 1 like per click 
   document.getElementById("like-blog").innerHTML =
     `<i class="fa fa-thumbs-up" aria-hidden="true"></i>` + " Liked!";
   numberOfClicks += 1;
@@ -163,7 +162,10 @@ window.onload = () => {
     }
   }
   if (
-    queryString.blogTitle != null && queryString.userName != null && queryString.blogContent != null) {
+    queryString.blogTitle != null &&
+    queryString.userName != null &&
+    queryString.blogContent != null
+  ) {
     const { blogTitle } = queryString;
     const { userName } = queryString;
     const { blogContent } = queryString;

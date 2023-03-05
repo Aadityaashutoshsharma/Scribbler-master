@@ -10,6 +10,7 @@ header {
   padding-left: 20px;
 }
 
+/*heading design */
 h1 {
   font-family: "Montez", cursive;
   color: #3951fd;
@@ -17,14 +18,17 @@ h1 {
   font-size: 40px;
 }
 
+/* anchor tag design */
 a {
   text-decoration: none;
 }
 
+/* heading design on hover */
 h1:hover {
   cursor: pointer;
 }
 
+/* sub heading design */
 h3 {
   font-family: "Ubuntu Mono", monospace;
   margin-top: -20px;
@@ -36,6 +40,7 @@ h3 {
   padding-top: 10px;
 }
 
+/* sign up sign in button design */
 .my-btn {
   background: linear-gradient(
     to right,
@@ -49,19 +54,5 @@ h3 {
   cursor: pointer;
   text-align: center;
   border-radius: 1px;
-}
-
-#myBtn {
   margin-right: 10px;
-}
-
-
-@media screen and (max-width: 412px){
-  header{
-    display: flex;
-    flex-direction: column;
-    /* background-color: red; */
-    justify-content: center;
-    align-items: center;
-  }
 }

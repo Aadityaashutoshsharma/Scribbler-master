@@ -36,17 +36,16 @@ body {
   padding: 2%;
 }
 #postContent-header{
-  font-size: 1.4rem;
   color: rgb(157, 157, 157);
   display: flex;
   justify-content: space-between;
 }
 #dltIcon{
   color: rgb(145, 145, 145);
+  cursor: pointer;
 }
 #description1,#description2,#description3,#description4,#description5{
-  font-size: 20px;
-  height: 9vh;
+  height: 5vh;
   overflow: hidden;
 }
 #postContentFooter{
@@ -56,6 +55,7 @@ body {
 }
 #menuIcon{
   color: rgb(145, 145, 145);
+  cursor: pointer;
 }
 #deletePostModal {
   display: none; /* Hidden by default */
@@ -76,6 +76,7 @@ body {
   margin: 18% auto; /* 5% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
+  border-radius: 5px;
   width: 25%; /* Could be more or less, depending on screen size */
   height: 15%;
   display: flex;
@@ -94,11 +95,15 @@ body {
   border: none;
   width: 25%;
   color: white;
-  background-color: rgb(18, 184, 18);
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  font-weight: bolder;
+  border-radius: 2px;
 }
 #notDlt{
   border: none;
   width: 25%;
   color: white;
-  background-color: rgb(202, 24, 24);
+  background: linear-gradient(to right, red, maroon);
+  font-weight: bolder;
+  border-radius: 2px;
 }

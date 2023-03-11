@@ -63,11 +63,6 @@ deletePostModalIcon.onclick = function () {
 deletePostModalspan.onclick = function () {
   deletePostModal.style.display = "none";
 };
-window.onclick = function (event) {
-  if (event.target == deletePostModal) {
-    deletePostModal.style.display = "none";
-  }
-};
 var id = "";
 function setId(htmlId) {
   deletePostModal.style.display = "block";

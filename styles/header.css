@@ -13,9 +13,10 @@ header {
 /*heading design */
 h1 {
   font-family: "Montez", cursive;
-  color: #3951fd;
+  color: #302b63;
   font-weight: bolder;
   font-size: 40px;
+  cursor: pointer;
 }
 
 /* anchor tag design */
@@ -25,13 +26,14 @@ a {
 
 /* heading design on hover */
 h1:hover {
-  cursor: pointer;
+  color: #2948ff;
 }
 
 /* sub heading design */
 h3 {
   font-family: "Ubuntu Mono", monospace;
   margin-top: -20px;
+  color: #302b63;
 }
 
 /*Designing the SignIn SignUp Buttons */
@@ -42,11 +44,7 @@ h3 {
 
 /* sign up sign in button design */
 .my-btn {
-  background: linear-gradient(
-    to right,
-    #2948ff,
-    #396afc
-  );
+  background: linear-gradient(to right, #2948ff, #396afc);
   color: white;
   border: 1px solid #667db6;
   font-weight: bolder;

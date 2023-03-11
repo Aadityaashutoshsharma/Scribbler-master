@@ -1,6 +1,16 @@
+body {
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
 /* main body of blog */
 .blog-content {
+  margin-top: 10px;
   padding: 0 50px;
+}
+
+#borderCon{
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* title style */
@@ -9,21 +19,30 @@
   justify-content: center;
   font-size: 40px;
   font-weight: bolder;
+  color: white;
 }
 
 /* author style */
 .author {
   font-size: 30px;
   font-weight: bolder;
+  color: white;
+}
+
+#blog-body {
+  color: white;
 }
 
 /* edit button style */
 #editingPost {
   float: right;
-  color: white;
-  border: 1px solid #ed2553;
-  background-color: #ed2553;
-  box-shadow: 0 2px 4px 0 #ed2553, 0 3px 10px 0 #ed2553;
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  );
+  font-weight: bolder;
+  border: 1px solid white;
   padding: 5px 10px;
   cursor: pointer;
   margin-top: -45px;
@@ -48,15 +67,22 @@
 
 /* styling like button */
 .like-btn button {
-  color: white;
-  background-color: #ed2553;
-  border: 1px solid #ed2553;
+  margin-top: 5px;
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  );
+  font-weight: bolder;
+  border: 1px solid white;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 /* like counts design */
-#like-count{
+#like-count {
   margin-top: 5px;
+  color: white;
 }
 
 /* comment container styling */
@@ -69,12 +95,21 @@
   width: 70%;
 }
 
+.commentHeading{
+  color: white;
+}
+
 /* Adding designs to comment button */
 .new-comment {
-  background-color: #ed2553;
-  border: 1px solid #ed2553;
-  color: white;
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  );
+  font-weight: bolder;
+  border: 1px solid white;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 /* Adding designs to comment section */

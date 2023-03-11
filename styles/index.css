@@ -1,9 +1,14 @@
 /* body background wallpaper */
 
 body {
-  background-image: url("../images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+
+  background: linear-gradient(
+    to right,
+    #03001e,
+    #7303c0,
+    #ec38bc,    
+    #fdeff9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* the center container including buttons all posts and create post */
@@ -17,13 +22,19 @@ body {
 
 /* buttons designing */
 #posts {
-  background: linear-gradient(to right, #d2e42e, #fffc00);
+  background-color: white;
   border: 2px solid #abbaab;
   border-radius: 4px;
   font-size: large;
   padding: 10px 20px;
   text-align: center;
   cursor: pointer;
+  color: #ec6ead;
+}
+
+#posts:hover {
+  background: linear-gradient(to right, #ec6ead, #3494e6);
+  color: aqua;
 }
 
 /* Create post Modal */
@@ -42,7 +53,6 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-
 
 /* Post Modal Heading design */
 .heading {
@@ -97,7 +107,7 @@ body {
   color: white;
   height: 3vh;
   margin-left: 35vw;
-  width: 5vw;
+  width: 7vw;
   border-radius: 2px;
   padding: 0 15px 15px 10px;
   cursor: pointer;

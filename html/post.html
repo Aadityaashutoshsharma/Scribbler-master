@@ -23,8 +23,8 @@
 
         <header>
             <div class="logo">                
-                <a href="../index.html"><h1>ScriBBler</h1></a>
-                <h3>Explore, Imagine, Create</h3>
+                <a href="../index.html"><h1 style="color: white;">ScriBBler</h1></a>
+                <h3 style="color: white;">Explore, Imagine, Create</h3>
             </div>
             <div class="btns">
                 <button id="myBtn" class="my-btn" onclick="popUp()">Sign Up</button>
@@ -90,16 +90,19 @@
 
     <!-- blog container -->
         <div class="blog-content">
-            <div id="blog-title" class="blog-Title">
-                <h id="blogTitleNew"></h>
+            <div id="borderCon">
+                <div id="blog-title" class="blog-Title">
+                    <h id="blogTitleNew"></h>
+                </div>
+                <div class="author">
+                    <p class="authorName"></p>
+                </div>
+                    <button id="editingPost" type="button" onclick="editPost()">Edit <i class="fa fa-edit"></i></button>
+                <div class="insideBlog">
+                    <p id="blog-body" class="contentOfBlog"></p>
+                </div>
             </div>
-            <div class="author">
-                <p class="authorName"> Aditya Sharma</p>
-            </div>
-                <button id="editingPost" type="button" onclick="editPost()">Edit <i class="fa fa-edit"></i></button>
-            <div class="insideBlog">
-                <p id="blog-body" class="contentOfBlog"></p>
-            </div>
+
 
             <!-- like container -->
             <div class="like-btn">

@@ -94,7 +94,8 @@ var contentEle = document.getElementById("content");
 
 function getPostData(){
     if(titleEle && contentEle){
-         console.log(titleEle.value, contentEle.value);
+         console.log(titleEle.value);
+         console.log("\n" + contentEle.value);
     }
 }
 
